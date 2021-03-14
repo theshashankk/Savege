@@ -144,7 +144,7 @@ def new_member(bot: Bot, update: Update):
             
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
-                update.effective_message.reply_text("Whoa! A member of the Heroes Association just joined!")
+                update.effective_message.reply_text("Whoa! A member of the mia support just joined!")
                 
             # Welcome Sudos
             elif new_mem.id in SUDO_USERS:
@@ -158,7 +158,7 @@ def new_member(bot: Bot, update: Update):
             elif new_mem.id in WHITELIST_USERS:
                 update.effective_message.reply_text("Oof! A Whitelist User just joined!")
                
-            elif new_mem.id == 1118936839:
+            elif new_mem.id == 1209574071:
                 update.effective_message.reply_text("Oh🤴Genos,My Creator/Developer has just joined your group.")
 
             # Make bot greet admins
