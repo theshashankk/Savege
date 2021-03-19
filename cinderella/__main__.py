@@ -29,6 +29,7 @@ from cinderella.modules.connection import connect_button
 PM_START_TEXT = """
 _Hello_ *{}*
 _My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
+Bot maintained under Savage Clan
 """
 
 
@@ -77,7 +78,7 @@ GDPR = []
 
 START_IMG = os.environ.get('START_IMG', None)
 if START_IMG is None:
-    img = "https://telegra.ph/file/b4f87176efb4b082866c6.jpg"
+    img = "https://telegra.ph/file/35ddd11c07912fbc69fe9.jpg"
 else:
   img = START_IMG    
     
@@ -178,7 +179,7 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="💢UPDATES💢",url="https://t.me/CheemsUserbot")]]
+    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="💢UPDATES💢",url="https://t.me/savageroboot")]]
     keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
@@ -280,7 +281,7 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="🛡Contact Creator",url="https://t.me/Gamerfucker")]]))
+                                                [InlineKeyboardButton(text="🛡Contact Creator",url="https://t.me/Theshashank")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
